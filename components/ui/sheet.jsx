@@ -14,6 +14,7 @@ const SheetClose = SheetPrimitive.Close
 
 const SheetPortal = SheetPrimitive.Portal
 
+
 const SheetOverlay = React.forwardRef(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
@@ -53,7 +54,7 @@ const SheetContent = React.forwardRef(({ side = "right", className, children, ..
         <Cross2Icon className="h-4 w-4" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
-      {children}
+         {children}
     </SheetPrimitive.Content>
   </SheetPortal>
 ))
