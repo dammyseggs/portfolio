@@ -88,6 +88,18 @@ body {
   @apply text-4xl xl:text-[60px] xl:leading-[68px] tracking-[-2px] font-bold;
 }
 
+.h2 {
+  @apply text-4xl font-bold;
+}
+
+.h3 {
+  @apply text-3xl font-bold;
+}
+
+.h4 {
+  @apply text-[22px] font-semibold;
+}
+
 .subtitle {
   @apply text-muted-foreground text-lg mb-8 xl:mb-4 font-light;
 }
