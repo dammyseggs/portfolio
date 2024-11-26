@@ -9,7 +9,7 @@ const links = [
 ]
 
 
-const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
+const Nav = ({ containerStyles, linkStyles, underLineStyles, onLinkClick }) => {
   const path = usePathname();
   return (
     <nav className={`${containerStyles}`}>
@@ -19,6 +19,7 @@ const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
             href={link.path}
             key={index}
             className={`capitalize ${linkStyles}`}
+            onClick={onLinkClick}
           >
             {link.path === path && (
               <motion.span

@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-
 import { AlignJustify } from "lucide-react";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import Socials from "./Socials";
 
 const MobileNav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeSheet = () => setIsOpen(false);
+
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger>
         <AlignJustify className="cursor-pointer" />
       </SheetTrigger>
@@ -17,14 +21,15 @@ const MobileNav = () => {
             <Logo />
             <Nav
               containerStyles="flex flex-col items-center gap-y-6 "
-              linkStyles="text-2xl" 
+              linkStyles="text-2xl"
+              onLinkClick={closeSheet} // Pass the closeSheet function to Nav
             />
           </div>
-          <Socials containerStyles="flex gap-x-4" iconStyles="text-2xl" /> 
+          <Socials containerStyles="flex gap-x-4" iconStyles="text-2xl" />
         </div>
       </SheetContent>
     </Sheet>
-  ); 
+  );
 };
 
 export default MobileNav;
