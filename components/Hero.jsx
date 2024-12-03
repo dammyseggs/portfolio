@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -13,7 +15,17 @@ import Socials from "./Socials";
 import DevImg from "./DevImg";
 import Badge from "./Badge";
 
+
 const Hero = () => {
+  
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/cv.pdf"; // Path to your CV in the public folder
+    link.download = "Emmanuel Famakinde's CV.pdf"; // Name for the downloaded file
+    link.click();
+ };
+
+
   return (
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto relative">
@@ -24,8 +36,7 @@ const Hero = () => {
             </div>
             <h1 className="h1">Hello, my name is Emmanuel Famakinde</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Brief description with insights into myself, my vocational
-              journey, and what i engage in professionally.
+               A professional software engineer with a focus on creating user-friendly and visually appealing websites.
             </p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-5">
               <Link href="/contact">
@@ -33,7 +44,7 @@ const Hero = () => {
                   Contact me <Send size={18} />
                 </Button>
               </Link>
-              <Button variant="secondary" className="gap-x-2">
+              <Button variant="secondary" className="gap-x-2" onClick={handleDownload}>
                 Download CV <Download size={18} />
               </Button>
             </div>
