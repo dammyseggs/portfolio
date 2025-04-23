@@ -11,7 +11,7 @@ const infoData = [
     },
     {
         icon: <PhoneCall size={20} />,
-        text: '+234 905 8413 579'
+        text: '+447546293494'
     },
     {
         icon: <MailIcon size={20} />,
@@ -23,7 +23,7 @@ const infoData = [
     },
     {
         icon: <HomeIcon size={20} />,
-        text: 'Lagos, Nigeria'
+        text: 'Birmingham, UK '
     }
 ];
 
