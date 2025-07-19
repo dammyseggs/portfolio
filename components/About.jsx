@@ -23,7 +23,7 @@ const infoData = [
     },
     {
         icon: <HomeIcon size={20} />,
-        text: 'Birmingham, UK '
+        text: 'Birmingham, UK'
     }
 ];
 
@@ -54,18 +54,15 @@ const skillData = [
     {
         title: 'skills',
         data: [
+             {
+                name: 'Javascript, React, React Native, Next JS',
+            }, 
             {
-                name: 'HTML, CSS',
+                name: 'Tailwind CSS, Material UI',
             },
             {
-                name: 'Front-end Development',
-            },
-            {
-                name: 'Javascript, C#',
-            },
-            {
-                name: 'Back-end Development',
-            },
+                name: 'Front-end Development, Mobile app Development',
+            },          
         ]
     },
     {
